@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <div className="todo-wrapper">
           <Header />
-          <TodoInput />
+          <TodoInput todoText="" addTodo={this.addTodo} />
         </div>
       </div>
     );

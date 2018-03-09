@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoInput.css';
 
 export default class TodoInput extends React.Component {
     constructor(props) {
@@ -6,12 +7,12 @@ export default class TodoInput extends React.Component {
 
         this.state = {value: "test"};
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleChang = this.handleChange.bind(this);
         this.addTodo = this.addTodo.bind(this);
     }
 
     handleChange(e) {
-        console.log("asdfsa");
+        console.log("Changing text");
     }
 
     addTodo(todo) {
@@ -21,7 +22,7 @@ export default class TodoInput extends React.Component {
     render() {
         return (
             <div>
-                <input type="text" value="0" onChange={this.handleChange} />
+                <input type="text" value="" onChange={this.handleChange} />
                 <button className="btn btn-primary" onClick={() => this.addTodo(this.state.value)}>Submit</button>
             </div>
         );
