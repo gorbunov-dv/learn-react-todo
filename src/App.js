@@ -4,6 +4,30 @@ import Header from './components/Header';
 import TodoInput from './components/TodoInput';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      todos: [
+        {id: 0, text: "Make dinner tonight!"},
+        {id: 1, text: "Fold the laundry."},
+        {id: 2, text: "Learn to make a React app!"}
+      ],
+      nextId: 3
+    }
+
+    this.addTodo = this.addTodo.bind(this);
+    this.removeTodo = this.removeTodo.bind(this);
+  }
+
+  addTodo(todoText) {
+    console.log("Todo added: ", todoText);
+  }
+
+  removeTodo(id) {
+    console.log("removing: ", id);
+  }
+  
   render() {
     return (
       <div className="App">
