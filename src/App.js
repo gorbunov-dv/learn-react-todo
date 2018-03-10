@@ -34,6 +34,13 @@ class App extends Component {
         <div className="todo-wrapper">
           <Header />
           <TodoInput todoText="" addTodo={this.addTodo} />
+          <ul>
+            {
+              this.state.todos.map((todo) => {
+                return <TodoItem todo={todo} key={todo.id} id={todo.id removeTodo={this.removeTodo}} />
+              })
+            }
+          </ul>  
         </div>
       </div>
     );
