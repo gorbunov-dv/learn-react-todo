@@ -27,11 +27,13 @@ class App extends Component {
     this.setState({
       todos: todos,
       nextId: ++this.state.nextId
-    })
+    });
   }
 
   removeTodo(id) {
-    console.log("removing: ", id);
+    this.setState({
+      todos: this.state.todos.filter((todo, index) => todo.id !== id)
+    })
   }
   
   render() {
