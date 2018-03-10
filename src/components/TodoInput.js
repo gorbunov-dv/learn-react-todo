@@ -3,11 +3,11 @@ import './TodoInput.css';
 
 export default class TodoInput extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {value: ''};
 
-        this.handleChang = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.addTodo = this.addTodo.bind(this);
     }
 
@@ -21,6 +21,7 @@ export default class TodoInput extends React.Component {
             this.props.addTodo(todo);
             this.setState({value: ''});
         }
+
     }
 
     render() {
