@@ -1,5 +1,5 @@
 import React from 'react';
-import '.TodoItem.css';
+import './TodoItem.css';
 
 export default class TodoItem extends React.Component {
     constructor(props) {
@@ -14,6 +14,7 @@ export default class TodoItem extends React.Component {
         return (
             <div className="todoWrapper">
                 <button className="removeTodo" onClick={(e) => this.removeTodo(this.props.id)}>remove</button>
+                {this.props.todo.text}
             </div>
         );
     }

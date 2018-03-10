@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
 import TodoInput from './components/TodoInput';
+import TodoItem from './components/TodoItem';
 
 class App extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class App extends Component {
           <ul>
             {
               this.state.todos.map((todo) => {
-                return <TodoItem todo={todo} key={todo.id} id={todo.id removeTodo={this.removeTodo}} />
+                return <TodoItem todo={todo} key={todo.id} id={todo.id} removeTodo={this.removeTodo} />
               })
             }
           </ul>  
